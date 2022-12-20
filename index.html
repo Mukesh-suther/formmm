@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script>
+     const firebaseConfig = {
+  apiKey: "AIzaSyCx-cFCFQBkYBMWKbnZCSp8qRACbuVVOmk",
+  authDomain: "form2-340a0.firebaseapp.com",
+  databaseURL: "https://form2-340a0-default-rtdb.firebaseio.com",
+  projectId: "form2-340a0",
+  storageBucket: "form2-340a0.appspot.com",
+  messagingSenderId: "802892484431",
+  appId: "1:802892484431:web:8832a70547677bfd4a7f3a",
+  measurementId: "G-TB5S01E3KY"
+};
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true" />
+
+      <div class="signup">
+        <label for="chk" aria-hidden="true">Sign up</label>
+        <input type="text" name="txt" placeholder="User name" id="username" />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          id="signup-email"
+        />
+        <input
+          type="password"
+          name="pswd"
+          placeholder="Password"
+          style="margin-bottom: 5px"
+          id="signup-password"
+          minlength="6"
+        />
+        <p id="message"></p>
+        <button onclick="signup()">Sign up</button>
+      </div>
+
+      <div class="login">
+        <label for="chk" aria-hidden="true">Login</label>
+        <input type="email" name="email" placeholder="Email" id="login-email" />
+        <input id="login-password" type="password" placeholder="Password" />
+        <p id="loginmessage"></p>
+        <a href="#" onclick="loginwithfacebook()">Login With Facebook</a>
+        <button onclick="login()">Login</button>
+      </div>
+    </div>
+  </body>
+  <script src="./signup.js"></script>
+  <script src="./login.js"></script>
+  <script src="./loginwithfacebook.js"></script>
+</html>
